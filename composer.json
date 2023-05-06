@@ -1,0 +1,20 @@
+{
+    "name": "lahcen/www",
+    "description": "Packages",
+    "autoload": {
+        "psr-4": {
+            "config\\": "config/",
+            "controllers\\":"controllers/",
+            "include\\":"include/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aouina4545LL",
+            "email": "lahcenaouina@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*"
+    }
+}
