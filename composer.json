@@ -4,7 +4,7 @@
     "autoload": {
         "psr-4": {
             "config\\": "config/",
-            "controllers\\":"controllers/",
+            "classes\\": "classes/",
             "include\\":"include/"
         }
     },

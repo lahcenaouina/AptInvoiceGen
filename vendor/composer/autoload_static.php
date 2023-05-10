@@ -13,8 +13,8 @@ class ComposerStaticInite80d131521bb015dba8969e2578759af
         ),
         'c' => 
         array (
-            'controllers\\' => 12,
             'config\\' => 7,
+            'classes\\' => 8,
         ),
     );
 
@@ -23,13 +23,13 @@ class ComposerStaticInite80d131521bb015dba8969e2578759af
         array (
             0 => __DIR__ . '/../..' . '/include',
         ),
-        'controllers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/controllers',
-        ),
         'config\\' => 
         array (
             0 => __DIR__ . '/../..' . '/config',
+        ),
+        'classes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/classes',
         ),
     );
 

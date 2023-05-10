@@ -7,6 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'include\\' => array($baseDir . '/include'),
-    'controllers\\' => array($baseDir . '/controllers'),
     'config\\' => array($baseDir . '/config'),
+    'classes\\' => array($baseDir . '/classes'),
 );
