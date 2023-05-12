@@ -1,6 +1,5 @@
 <?php
 
-require "../view/Navbar.php";
 session_start();
 session_unset();
 session_destroy();

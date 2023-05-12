@@ -1,4 +1,6 @@
 <!-- Nav Bar -->
+
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Cite Marine Royale</a>
@@ -22,31 +24,22 @@
 
       </ul>
         <?php if (isset($_SESSION["username"]) and isset($_SESSION["email"]) and $_SESSION["type"]){?>
-            <div class="d-flex justify-content-around mr-3">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Link
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-
-
-
-
-
-<!--                <li class="nav-item">-->
-<!--                    <a href="../view/Profile.php">Profile</a>-->
-<!--                    -->
-<!--                </li>-->
-<!--                <li class="nav-item">-->
-<!--                    <a  href="../include/logout.inc.php">Log Out</a>-->
-<!--                </li>-->
+            <div class="navbar-nav ml-auto">
+                <a href="#" class="nav-item nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">1</span></a>
+                <a href="#" class="nav-item nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">10</span></a></a>
+                <div class="nav-item dropdown ">
+                    <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle user-action"><i class="fa fa-user-o"></i> <?=$_SESSION["username"] ?> <b class="caret"></b></a>
+                    <div class="dropdown-menu drp_profile">
+                        <a href="#" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></a>
+                        <a href="#" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></a>
+                        <a href="#" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../include/logOut.inc.php" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></a>
+                    </div>
+                </div>
             </div>
+
+
 
         <?php }else {?>
                 <a class="btn " role="button" href="../view/Signup.php">S'inscrire</a>

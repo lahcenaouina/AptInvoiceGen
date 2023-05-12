@@ -10,10 +10,7 @@ Abstract class Signup extends DBH
         $stmt = $this->connect()->prepare($sql);
         $pwdHashed = password_hash($pwd, PASSWORD_DEFAULT);
 
-        if (!$stmt->execute([
-            $uid,
-            $email,
-            $pwdHashed])) {
+        if (!$stmt->execute([$uid, $email,$pwdHashed])) {
             $stmt = null;
             header("location: ../view/signup.php?Error=STMTFAILED");
             exit();
