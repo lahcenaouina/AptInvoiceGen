@@ -4,10 +4,15 @@ echo '
         body{
             display: flex;
             align-items: center;
-            justify-content: center;  
+            justify-content: center; 
+            height: 80vmin; 
+        }
+        #d {
+            transform: scale(1.9);
         }
 </style>
      <body>
-        <img src="https://media4.giphy.com/media/3oEjI6SIIHBdRxXI40/200w.gif?cid=6c09b952k8txms2o74u2r6lqgucwm8hhdk2tlzg2fzpzpelh&ep=v1_gifs_search&rid=200w.gif&ct=g">
+            <div id="d" class="px-3 py-1 text-xs font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">loading...</div>
+
     </body>
     ';

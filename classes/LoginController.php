@@ -15,6 +15,7 @@ class LoginController extends Login
 
     public function ConnectUser()
     {
+        
         if ($this->emptyInputs() === false ) {
             header("location: ../view/login.php?Error=Empty Input");
             exit();
@@ -27,7 +28,7 @@ class LoginController extends Login
         var_dump($data);
 
         if ($data["user_email"] === $this->uid_email or $data["user_username"] === $this->uid_email) {
-            $CheckPwd = password_verify($this->pwd, $data["user_password"]);
+            $CheckPwd = $this->pwd == $data["user_password"];
             if (!$CheckPwd) {
                 header("location: ../view/login.php?Error=Password Not Correct");
                 exit();
@@ -37,8 +38,8 @@ class LoginController extends Login
                 $_SESSION["username"] = $FullData["user_username"];
                 $_SESSION["email"] = $FullData["user_email"];
                 $_SESSION["id"] = $FullData["user_id"];
-                $_SESSION["type"] = "User";
-                header("location: ../view/home.php");
+                $_SESSION["type"] = $FullData["type"];
+                header("location: ../view/Dashboard.php");
                 exit();
             }
         }

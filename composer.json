@@ -5,7 +5,8 @@
         "psr-4": {
             "config\\": "config/",
             "classes\\": "classes/",
-            "include\\":"include/"
+            "include\\":"include/",
+            "view\\":"view/"
         }
     },
     "authors": [

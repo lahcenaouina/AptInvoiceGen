@@ -4,13 +4,22 @@ namespace classes;
 
 Abstract class Signup extends DBH
 {
-    protected function SetUser($uid , $email , $pwd)
+    /**
+     * Summary of SetUser
+     * @param mixed $username
+     * @param mixed $email
+     * @param mixed $tele
+     * @param mixed $Imm
+     * @param mixed $Num_house
+     * @param mixed $pwd
+     * @return void
+     */
+    protected function SetUser($username , $email , $tele ,$Imm , $Num_house,$type, $pwd)
     {
-        $sql = "INSERT INTO users( user_username, user_email, user_password) VALUES (?,?,?)";
+        $sql = "`users`(`user_username`, `user_email`, `user_password`, `type`, `tele`, `Num_house`, `Imm`)";
         $stmt = $this->connect()->prepare($sql);
-        $pwdHashed = password_hash($pwd, PASSWORD_DEFAULT);
-
-        if (!$stmt->execute([$uid, $email,$pwdHashed])) {
+        
+        if (!$stmt->execute([$username , $email , $pwd ,$type , $tele, $Num_house , $Imm])) {
             $stmt = null;
             header("location: ../view/signup.php?Error=STMTFAILED");
             exit();

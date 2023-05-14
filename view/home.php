@@ -10,6 +10,7 @@ if (isset($_SESSION["username"]) and isset($_SESSION["email"]) and $_SESSION["ty
     require "../view/Header.php";
     require "../view/Navbar.php";
     require "../view/PageNotFound.php";
+    
     die();
 }
 ?>

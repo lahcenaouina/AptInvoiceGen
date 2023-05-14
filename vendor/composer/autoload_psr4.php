@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'view\\' => array($baseDir . '/view'),
     'include\\' => array($baseDir . '/include'),
     'config\\' => array($baseDir . '/config'),
     'classes\\' => array($baseDir . '/classes'),

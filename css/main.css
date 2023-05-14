@@ -1,139 +1,68 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-*{
-        font-family:Roboto ;
+* {
+    font-family: 'Arial', sans-serif;
 }
-
-.main-div{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color: #212A3E;
-        flex-wrap: wrap;
-        height: 280px;
-        padding: 10px;
-        
-        
-}
-.bar {
-        height: 100px;
-        width: 9px;
-        background-color: rgb(255, 255, 255);
-}
-.mainback {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        background-color: #394867;
-        height: 80%;
-        width: 90%;
-        border-radius: 5px;
-        text-overflow: hidden;
-        font-size: 26px;
-        color: white;
+.container-main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    margin-bottom: 9px;
 
 }
-.slider {
-        padding: 6px;
-        display: flex;
-        text-overflow: hidden;
-        align-items: center;
-        position: relative;
-        height: 250px;
-        width: 250px;
-        background-color: #394867;
-        border-radius: 3px;
+.container-main img {
+    height: 200px;
+    padding: 10px;
 }
+.container-main div {
+    margin-top: 9px;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+section {
 
-.infomain {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        background-color: rgba(151, 151, 151, 0);
-        height: 45vmin;
-        width: 100%;
+    background: url("https://images.posarellivillas.com/property_posarelli/96068/xwide/dsc-7788-easyhdr-vivid-colors.jpg");
 }
-.news {
-        
-        width: 31%;
-        height: auto;
-        padding: 6px;
-        border-left: 5px solid #146C94;
+#container-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 85vmin;
+    margin: 0;
 }
- .information  {
-
-        width: 31%;
-        height: auto;
-        padding: 6px;
-        border-left: 5px solid #F45050;
+#holder form {
+    padding: 20px;
 }
-.login-main {
-
-        width: 31%;
-        height: auto;
-        padding: 6px;
-        border-left: 5px solid #394867;
+#holder {
+    padding: 15px;
+    border-radius: 9px;
+    box-shadow: 0 0 1px grey;
+    width: 55%;
+    height: auto;
+    background-color: white;
 }
-.login-main p, .information p, .news  p {
-        background-color: #394867;
-        width: 100px;
-        text-align: center;
-        color: white;
+#Search {
+    background: white;
+    padding: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: baseline;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
 }
-
-.news img {
-        height: 280px;
-        border-radius: 9px;
+#Search button {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.login-main p{
-        background-color: #394867;
-}
- .information p {
-        background-color: #F45050;
-}
-.news  p {
-        background-color: #146C94;
-}
-
-/* responsive */
-@media only screen and (max-width: 1170px) {
-        .infomain {
-                display: grid;
-                width: 100%;
-        }
-        .infomain div {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 12px;
-        }
-        .login-main p, .information p, .news  p {
-                background-color: #394867;
-                width: 100%;
-                text-align: center;
-                border-radius: 6px;
-                color: white;
-        }
-        
-        .login-main {
-                margin-top: -30px;
-        }
-        .news {
-                margin-top: 30px;
-        }
-        .bar ,.on3{
-                display: none;
-        }
-        .mainback{
-                width: 100%;
-        }
-        .news img {
-                height: auto;
-        }
-        .loginbtn {
-                
-                width: 100%;
-        }
-      }
