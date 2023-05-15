@@ -16,7 +16,7 @@ Abstract class Signup extends DBH
      */
     protected function SetUser($username , $email , $tele ,$Imm , $Num_house,$type, $pwd)
     {
-        $sql = "`users`(`user_username`, `user_email`, `user_password`, `type`, `tele`, `Num_house`, `Imm`)";
+        $sql = "INSERT INTO `users`( `user_username`, `user_email`, `user_password`, `type`, `tele`, `Num_house`, `Imm`) VALUES (?,?,?,?,?,?,?);";
         $stmt = $this->connect()->prepare($sql);
         
         if (!$stmt->execute([$username , $email , $pwd ,$type , $tele, $Num_house , $Imm])) {

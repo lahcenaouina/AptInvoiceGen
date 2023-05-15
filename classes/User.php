@@ -5,7 +5,7 @@ use PDO ;
 abstract class User extends DBH {
        
         protected function GetDataDb($username , $email){
-                $sql = "SELECT user_id,user_username,user_email FROM users Where user_username=? and user_email=?";
+                $sql = "SELECT user_id,user_username,user_email FROM users Where user_username=? and user_email=? ORDER BY user_username ASC; ";
                 $stmt = $this->connect()->prepare($sql);
                 if (!$stmt->execute([$username , $email])){
                         $stmt = null ; 
