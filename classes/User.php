@@ -25,5 +25,15 @@ abstract class User extends DBH {
                 }
                 return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+        protected function GetClientsbyImmD($Imm) {
+                $sql = "SELECT u.user_username FROM users u , imm where u.Imm = Imm_name and u.Imm = ?";
+                $stmt = $this->connect()->prepare($sql);
+                if (!$stmt->execute([$Imm])){
+                        $stmt = null ; 
+                        header("location: view/Clients.php?Error=STMTFAILD");
+                        die();
+                }
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);    
+        }
 
 }       

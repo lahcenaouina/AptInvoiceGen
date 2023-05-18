@@ -1,91 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error Page</title>
+    <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-<style>
-    * {
-        font-family: Google sans, Arial;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html, body {
-        margin: 0;
-        padding: 0;
-    }
+body {
+  font-family: "Poppins", sans-serif;
+}
 
-    .flex-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: white;
-        animation: colorSlide 15s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-    .text-center {
-        text-align: center;
-    h1,
-    h3 {
-        margin: 10px;
-        cursor: default;
+.gif {
+  display: flex;
+  justify-content: center;
+}
 
-    .fade-in {
-        animation: fadeIn 2s ease infinite;
-    }
-    }
+.content {
+  text-align: center;
+  margin: 3rem 0;
+}
 
-    h1 {
-        font-size: 8em;
-        transition: font-size 200ms ease-in-out;
-        border-bottom: 1px dashed white;
+.content .main-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+p {
+  font-size: 1.3rem;
+  padding: 0.7rem 0;
+}
 
-    span#digit1 { animation-delay: 200ms; }
-    span#digit2 { animation-delay: 300ms; }
-    span#digit3 { animation-delay: 400ms; }
-    }
+button {
+  padding: 1rem;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background: #0046d4;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
 
-    button {
-        border: 1px solid white;
-        background: transparent;
-        outline: none;
-        padding: 10px 20px;
-        font-size: 1.1rem;
-        font-weight: bold;
-        color: white;
-        text-transform: uppercase;
-        transition: background-color 200ms ease-in;
-        margin: 20px 0;
-
-    &:hover {
-         background-color: white;
-         color: #555;
-         cursor: pointer;
-     }
-    }
-    }
-    }
-
-    @keyframes colorSlide {
-        0% { background-color: #152a68; }
-        25% { background-color: royalblue; }
-        50% { background-color: seagreen; }
-        75% { background-color: tomato; }
-        100% { background-color: #152a68; }
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        };
-    100% {
-        opacity: 1;
-    }
-    }
-</style>
-
-<div class="flex-container">
-    <div class="text-center">
-        <h1>
-            <span class="fade-in" id="digit1">4</span>
-            <span class="fade-in" id="digit2">0</span>
-            <span class="fade-in" id="digit3">4</span>
-        </h1>
-        <h3 class="fadeIn">PAGE NOT FOUND</h3>
-        <a class="btn btn-danger" href="../index.php">Return Home</a>
+    </style>
+    <script
+      src="https://kit.fontawesome.com/66aa7c98b3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="gif">
+        <img src="https://i.postimg.cc/2yrFyxKv/giphy.gif" alt="gif_ing" />
+      </div>
+      <div class="content">
+        <h1 class="main-heading">This page is gone.</h1>
+        <p>
+          ...maybe the page you're looking for is not found or never existed.
+        </p>
+        <a href="../index.php" >
+          <button>Back to home <i class="far fa-hand-point-right"></i></button>
+        </a>
+      </div>
     </div>
-</div>
+  </body>
+</html>

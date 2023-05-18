@@ -29,7 +29,7 @@ if (isset($_SESSION["username"])) {
                         <form style="border: none;" action="../include/AddNewFacture.inc.php" method="get">
 
                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imm</label>
-                                <select required name="Imm" id="small"
+                                <select id="Imm" required name="Imm" id="small"
                                         class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                         <option value=""></option>"
 
@@ -53,18 +53,10 @@ if (isset($_SESSION["username"])) {
 
                                 <div class="mb-1">
                                         <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom</label>
-                                        <select required name="username" id="small"
+                                        <select id="Nomf" required name="username" id="small"
                                                 class="block w-full p-2 mb-6 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                                <option value=""></option>"
-
-                                                <?php
-                                                $list_users = $user->GetAllClients();
-                                                sort($list_users);
-                                                foreach ($list_users as $user): ?>
-                                                        <option value="<?= $user["user_username"] ?>"><?= $user["user_username"] ?></option>"
-                                                        <?php
-                                                endforeach;
-                                                ?>
+                                                <option value="">Choisir Nom</option>
+                                                
                                         </select>
                                 </div>
                                 <label for="" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">montant d'argent
@@ -121,7 +113,7 @@ if (isset($_SESSION["username"])) {
                 endif;
                 ?>
         </div>
-
+                <script src="../js/Api_get_Names.js"></script>
         <?php
 
 } else {

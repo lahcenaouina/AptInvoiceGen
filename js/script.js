@@ -16,3 +16,5 @@ window.addEventListener('resize', function() {
   const windowWidth = window.innerWidth;
     navres(windowWidth);
 });
+
+

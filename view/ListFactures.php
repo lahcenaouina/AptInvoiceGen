@@ -10,8 +10,10 @@ require_once '../vendor/autoload.php';
 require "../classes/UserController.php";
 
 use classes\date;
+use classes\FactureController;
 use classes\UserConroller;
 use classes\GestionData;
+use classes\FactureView;
 
 if (isset($_SESSION["username"])) {
         //Grab data
@@ -107,30 +109,31 @@ if (isset($_SESSION["username"])) {
                                 <table>
                                         <thead>
                                                 <tr>
-                                                        <th scope="col">REF</th>
-                                                        <th scope="col">Nom</th>
+                                                        <th  scope="col">Nom </th>
+                                                        <th scope="col">Date Payé</th>
                                                         <th scope="col">immeuble</th>
                                                         <th scope="col">numero immeuble</th>
-                                                        <th scope="col">Telephone</th>
-                                                        <!-- <th scope="col">Email</th> -->
+                                                        <th scope="col">Montant</th>
+                                                        <th scope="col">Tele</th>
 
                                                 </tr>
                                         </thead>
                                         <tbody>
                                                 <?php
-                                                $clients = $user->GetAllClients();
-                                                for ($i = 0; $i < count($clients); $i++) {
-                                                        if ($clients[$i]["type"] == UserConroller::ADMIN) {
-                                                                $clients[$i]["user_username"] .= " <span class=\"bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300\">Responsable</span>";
-                                                        }
+                                                $factures = new FactureView();
+                                                $list_factures = $factures->GetALlFact();
+
+                                                for ($i = 0; $i < count($list_factures); $i++) {
+        
                                                 ?>
                                                         <tr>
-                                                                <td data-label="ID"><?= $clients[$i]["Imm"] . $clients[$i]["Num_house"] ?></td>
-                                                                <td data-label="NOM"><?= $clients[$i]["user_username"] ?></td>
-                                                                <td data-label="IMM"><?= $clients[$i]["Imm"] ?></td>
-                                                                <td data-label="NUMIMM"><?= $clients[$i]["Num_house"] ?></td>
-                                                                <td data-label="TEL"><?= $clients[$i]["tele"] ?></td>
-                                                                <!-- <td data-label="Email"><?= $clients[$i]["user_email"] ?></td> -->
+                                                                <td data-label="ID"><?=$list_factures[$i]["user_username"]  ?></td>
+                                                                <td data-label="NOM"><?= $list_factures[$i]["facture_mois"] ."-".$list_factures[$i]["facture_year"] ?></td>
+                                                                <td data-label="IMM"><?= $list_factures[$i]["facture_Imm"] ?></td>
+                                                                <td data-label="NUMIMM"><?= $list_factures[$i]["facture_Appr_num"] ?></td>
+                                                                <td data-label="NUMIMM"><?= $list_factures[$i]["money"] ?></td>
+                                                                <td data-label="NUMIMM"><?= $list_factures[$i]["tele"] ?></td>
+                                                             
 
                                                         </tr>
                                                 <?php
